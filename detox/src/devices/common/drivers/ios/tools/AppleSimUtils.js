@@ -236,6 +236,7 @@ class AppleSimUtils {
         silent: true
       });
     } catch (err) {
+      console.log({f:"Error at terminate", err, code: err.code, stderr: err.stderr}); /*DELETEME*/
       // Since we have no convenient way to check whether the app is currently running or not, we might execute this
       // command (terminate) even if the app is not currently running, or even installed.
       // We have encountered some case where the following error is thrown in a case where the app did not run:
