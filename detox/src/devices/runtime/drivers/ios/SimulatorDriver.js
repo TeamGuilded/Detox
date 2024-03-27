@@ -106,10 +106,10 @@ class SimulatorDriver extends IosDriver {
   }
 
   async terminate(bundleId) {
-    const { udid } = this;
-    await this.emitter.emit('beforeTerminateApp', { deviceId: udid, bundleId });
-    await this._applesimutils.terminate(udid, bundleId);
-    await this.emitter.emit('terminateApp', { deviceId: udid, bundleId });
+    // const { udid } = this;
+    // await this.emitter.emit('beforeTerminateApp', { deviceId: udid, bundleId });
+    // await this._applesimutils.terminate(udid, bundleId);
+    // await this.emitter.emit('terminateApp', { deviceId: udid, bundleId });
   }
 
   async setBiometricEnrollment(yesOrNo) {
