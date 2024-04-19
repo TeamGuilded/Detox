@@ -3,7 +3,7 @@
   "packages": [
     "detox"
   ],
-  "version": "19.12.6",
+  "version": "19.12.59",
   "npmClient": "npm",
   "command": {
     "publish": {
