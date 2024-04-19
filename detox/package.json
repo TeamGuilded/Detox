@@ -28,7 +28,8 @@
     "test": "npm run unit",
     "posttest": "cp coverage/lcov.info coverage/unit.lcov",
     "unit:watch": "jest --watch",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postinstall": "node scripts/postinstall.js"
   },
   "devDependencies": {
     "@types/child-process-promise": "^2.2.1",
