@@ -1,17 +1,9 @@
 /* tslint:disable: no-console */
 const exec = require('shell-utils').exec;
 
-const {
-  log,
-  logSection,
-  getReleaseNpmTag,
-  getReleaseVersionType,
-  getVersionSafe,
-  isDryRun,
-  isSkipNpm
-} = require('./releaseArgs');
+const { log, logSection, getReleaseNpmTag, getReleaseVersionType, getVersionSafe, isDryRun, isSkipNpm } = require('./releaseArgs');
 
-const {removeDocsForVersion, buildDocsForVersion} = require('./releaseDocumentation');
+const { removeDocsForVersion, buildDocsForVersion } = require('./releaseDocumentation');
 
 function publishNewVersion() {
   validatePrerequisites();
@@ -21,14 +13,14 @@ function publishNewVersion() {
   const currentVersion = queryNpmVersionByTag(releaseTag);
   log(`    current published version on tag ${releaseTag}: ${currentVersion || 'N/A'}`);
 
-  publishToNpm(releaseTag);
+  // publishToNpm(releaseTag);
 
   const newVersion = getVersionSafe();
   log(`    new published version on tag ${releaseTag}: ${newVersion}`);
 
-  if (releaseTag === 'latest') {
-    releaseDocsVersion(newVersion, currentVersion);
-  }
+  // if (releaseTag === 'latest') {
+  //   releaseDocsVersion(newVersion, currentVersion);
+  // }
 }
 
 function validatePrerequisites() {
@@ -50,13 +42,16 @@ function publishToNpm(npmTag) {
   const skipNpm = isSkipNpm();
   if (dryRun) {
     log('DRY RUN: Lerna-publishing without publishing to NPM');
-  }
-  else if (skipNpm) {
+  } else if (skipNpm) {
     log('SKIP NPM is set: Lerna-publishing without publishing to NPM');
   }
 
-  const preid = versionType.includes("pre") ? `--preid=${npmTag}` : ``;
-  exec.execSync(`lerna publish ${versionType} --yes --dist-tag ${npmTag} ${preid} ${dryRun ? '--no-push': ''}  ${(dryRun || skipNpm) ? '--skip-npm' : ''} -m "Publish %v [ci skip]" --tag-version-prefix='' --force-publish=detox --loglevel trace`);
+  const preid = versionType.includes('pre') ? `--preid=${npmTag}` : ``;
+  exec.execSync(
+    `lerna publish ${versionType} --yes --dist-tag ${npmTag} ${preid} ${dryRun ? '--no-push' : ''}  ${
+      dryRun || skipNpm ? '--skip-npm' : ''
+    } -m "Publish %v [ci skip]" --tag-version-prefix='' --force-publish=detox --loglevel trace`
+  );
 }
 
 function releaseDocsVersion(newVersion, previousVersion) {

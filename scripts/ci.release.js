@@ -1,21 +1,19 @@
 /* tslint:disable: no-console */
 const fs = require('fs');
-const {exec} = require('shell-utils');
+const { exec } = require('shell-utils');
 
-const {
-  log, logSection, isRelease, getPackagesFromPreviousBuilds
-} = require('./utils/releaseArgs');
+const { log, logSection, isRelease, getPackagesFromPreviousBuilds } = require('./utils/releaseArgs');
 const publishNewVersion = require('./utils/publishNewVersion');
 
 function run() {
   logSection('Script started');
-  assertCI();
+  // assertCI();
 
   log('Configuring stuff...');
-  setupGitConfig();
-  setupNpmConfig();
+  // setupGitConfig();
+  // setupNpmConfig();
   getPackagesFromPreviousBuilds();
-  versionTagAndPublish();
+  // versionTagAndPublish();
 }
 
 function assertCI() {
@@ -49,7 +47,7 @@ function versionTagAndPublish() {
   logSection('Preparing to tag/release');
 
   if (isRelease()) {
-    publishNewVersion();
+    // publishNewVersion();
     log(`Great success, much amaze`);
   } else {
     log(`Skipping release...`);
