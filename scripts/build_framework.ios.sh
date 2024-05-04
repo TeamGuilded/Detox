@@ -4,6 +4,7 @@
 xcodebuild -version &>/dev/null || { echo "WARNING: Xcode is not installed on this machine. Skipping iOS framework build phase"; exit 0; }
 
 detoxRootPath="$(dirname "$(dirname "$0")")"
+echo "Detox Root path detoxRootPath: ${detoxRootPath}"
 detoxVersion=`node -p "require('${detoxRootPath}/package.json').version"`
 
 sha1=`(echo "${detoxVersion}" && xcodebuild -version) | shasum | awk '{print $1}' #"${2}"`
@@ -23,6 +24,8 @@ function prepareAndBuildFramework () {
 
 function extractFramework () {
   echo "Extracting Detox framework..."
+  echo "Extracting detoxFrameworkDirPath: ${detoxFrameworkDirPath}"
+  echo "Extracting detoxRootPath: ${detoxRootPath}"
   mkdir -p "${detoxFrameworkDirPath}"
   tar -xjf "${detoxRootPath}"/Detox-ios.tbz -C "${detoxFrameworkDirPath}"
 }
