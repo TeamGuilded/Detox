@@ -106,9 +106,6 @@ class SimulatorDriver extends IosDriver {
   }
 
   async terminate(bundleId) {
-    // NOTE: This is causing the detox tests to fail with an error "found nothing to terminate"
-    // More info on this github issuse: https://github.com/wix/Detox/issues/4148#issuecomment-1761443455
-
     const { udid } = this;
     await this.emitter.emit('beforeTerminateApp', { deviceId: udid, bundleId });
     await this._applesimutils.terminate(udid, bundleId);
