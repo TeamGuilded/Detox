@@ -1,0 +1,51 @@
+Xcode 12 and above; using modern script for building the framework to support Apple Silicon
+Using -UseNewBuildSystem=YES
+2022-10-03 04:30:16.780 xcodebuild[28858:184666] XType: com.apple.fonts is not accessible.
+2022-10-03 04:30:16.780 xcodebuild[28858:184666] XType: XTFontStaticRegistry is enabled.
+/Users/builder/Library/Developer/Xcode/DerivedData/Detox-awkysymaalbifmciinhfkayhhhev/Build/Products/Release-iphonesimulator
+2022-10-03 04:30:47.653 xcodebuild[28959:185141] XType: com.apple.fonts is not accessible.
+2022-10-03 04:30:47.654 xcodebuild[28959:185141] XType: XTFontStaticRegistry is enabled.
+/Users/builder/work/detox/ios/COSTouchVisualizer/Classes/COSTouchVisualizerWindow.m:187:21: warning: enumeration values 'UITouchPhaseRegionEntered', 'UITouchPhaseRegionMoved', and 'UITouchPhaseRegionExited' not handled in switch [-Wswitch]
+            switch (touch.phase) {
+                    ^
+/Users/builder/work/detox/ios/COSTouchVisualizer/Classes/COSTouchVisualizerWindow.m:187:21: note: add missing switch cases
+            switch (touch.phase) {
+                    ^
+1 warning generated.
+error: the following command failed with exit code 0 but produced no further output
+CompileC /Users/builder/Library/Developer/Xcode/DerivedData/Detox-awkysymaalbifmciinhfkayhhhev/Build/Intermediates.noindex/COSTouchVisualizer.build/Release-iphonesimulator/COSTouchVisualizer.build/Objects-normal/i386/COSTouchVisualizerWindow.o /Users/builder/work/detox/ios/COSTouchVisualizer/Classes/COSTouchVisualizerWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'COSTouchVisualizer' from project 'COSTouchVisualizer')
+error: the following command failed with exit code 0 but produced no further output
+CompileC /Users/builder/Library/Developer/Xcode/DerivedData/Detox-awkysymaalbifmciinhfkayhhhev/Build/Intermediates.noindex/COSTouchVisualizer.build/Release-iphonesimulator/COSTouchVisualizer.build/Objects-normal/arm64/COSTouchVisualizerWindow.o /Users/builder/work/detox/ios/COSTouchVisualizer/Classes/COSTouchVisualizerWindow.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'COSTouchVisualizer' from project 'COSTouchVisualizer')
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingRuntime.cpp.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingFile.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingWriter.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingPlatformDarwin.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingMerge.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingBiasVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingBuffer.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingNameVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfiling.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingUtil.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingValue.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingMergeFile.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingInternal.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingVersionVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingRuntime.cpp.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingFile.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingWriter.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingPlatformDarwin.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingMerge.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingBiasVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingBuffer.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingNameVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfiling.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingUtil.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingValue.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingMergeFile.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingInternal.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+ld: warning: object file (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.profile_iossim.a(InstrProfilingVersionVar.c.o)) was built for newer iOS Simulator version (9.0) than being linked (8.0)
+note: Using new build system
+note: Planning
+note: Build preparation complete
+note: Building targets in parallel
+/Users/builder/work/detox/ios/COSTouchVisualizer/Classes/COSTouchVisualizer.xcodeproj: warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 15.0.99. (in target 'COSTouchVisualizer' from project 'COSTouchVisualizer')
